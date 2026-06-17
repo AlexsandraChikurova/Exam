@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>КУЛЬТУРИ — искусство в историях</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar" id="navbar">
+  <nav class="navbar__inner" aria-label="Навигация">
+    <div class="navbar__logo">
+      <img src="foto/logo.png" alt="Логотип КУЛЬТУРИ" class="navbar__logo-icon">
+      <span class="navbar__logo-text">КУЛЬТУРИ</span>
+    </div>
+    <ul class="navbar__links" role="list">
+      <li><a href="#about" class="navbar__link">О нас</a></li>
+      <li><a href="#contacts" class="navbar__link">Контакты</a></li>
+    </ul>
+    <a href="#cta" class="navbar__btn"><span aria-hidden="true">↓</span> Скачать</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="plug-world" id="plug-world" aria-label="Стартовая интерактивная сцена">
+  <div class="plug-track" id="plug-track">
+
+    <div class="plug-scene plug-scene--socket" id="scene-socket">
+
+      <div class="socket" id="socket" aria-label="Розетка">
+        <svg class="socket__svg" viewBox="0 0 300 300" width="260" height="260" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="sOF" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#f8f6f3"/><stop offset="100%" stop-color="#e0deda"/>
+            </linearGradient>
+            <linearGradient id="sPlate" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f5f3f0"/><stop offset="100%" stop-color="#e2dfdb"/>
+            </linearGradient>
+            <radialGradient id="sWell" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#dedad6"/><stop offset="100%" stop-color="#b8b4b0"/>
+            </radialGradient>
+            <radialGradient id="sHole" cx="40%" cy="35%" r="65%">
+              <stop offset="0%" stop-color="#1e1c1a"/><stop offset="100%" stop-color="#080604"/>
+            </radialGradient>
+            <filter id="sFS"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#00000018"/></filter>
+            <filter id="sWS"><feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#00000030"/></filter>
+          </defs>
+          <rect x="6" y="6" width="288" height="288" rx="20" fill="url(#sOF)" stroke="#d0ccc8" stroke-width="1" filter="url(#sFS)"/>
+          <rect x="20" y="20" width="260" height="260" rx="14" fill="url(#sPlate)" stroke="#c8c4c0" stroke-width="1"/>
+          <circle cx="150" cy="148" r="82" fill="url(#sWell)" filter="url(#sWS)"/>
+          <circle cx="150" cy="148" r="80" fill="none" stroke="rgba(0,0,0,0.18)" stroke-width="4"/>
+          <circle cx="150" cy="148" r="74" fill="none" stroke="#b8b4b0" stroke-width="5"/>
+          <rect x="106" y="116" width="15" height="40" rx="7.5" fill="url(#sHole)" stroke="#0a0806" stroke-width="1"/>
+          <rect x="109" y="119" width="9" height="34" rx="4.5" fill="#050403"/>
+          <rect x="179" y="116" width="15" height="40" rx="7.5" fill="url(#sHole)" stroke="#0a0806" stroke-width="1"/>
+          <rect x="182" y="119" width="9" height="34" rx="4.5" fill="#050403"/>
+          <circle cx="150" cy="185" r="10" fill="url(#sHole)" stroke="#0a0806" stroke-width="1"/>
+          <circle cx="150" cy="185" r="6.5" fill="#050403"/>
+          <text x="150" y="258" font-size="9" fill="#a8a4a0" font-family="Arial" font-weight="600" text-anchor="middle" letter-spacing="0.8">CE 16A 250V~</text>
+        </svg>
+        <div class="socket__glow" id="socket-glow"></div>
+      </div>
+
+      <div class="plug" id="plug" aria-label="Штекер — нажми и тяни к розетке">
+
+        <svg class="plug__svg plug__svg--normal" id="plug-normal"
+             viewBox="0 0 130 220" width="110" height="190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="pBody" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#e8e4e0"/><stop offset="50%" stop-color="#f4f2ef"/><stop offset="100%" stop-color="#dedad6"/>
+            </linearGradient>
+            <linearGradient id="pPin" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#a8a4a0"/><stop offset="50%" stop-color="#e8e6e4"/><stop offset="100%" stop-color="#b0acaa"/>
+            </linearGradient>
+            <linearGradient id="pCable" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#d0ccc8"/><stop offset="50%" stop-color="#e8e4e0"/><stop offset="100%" stop-color="#c8c4c0"/>
+            </linearGradient>
+            <radialGradient id="pFace" cx="45%" cy="38%" r="60%">
+              <stop offset="0%" stop-color="#f8f6f3"/><stop offset="100%" stop-color="#e0dcd8"/>
+            </radialGradient>
+          </defs>
+          <rect x="34" y="0" width="14" height="68" rx="7" fill="url(#pPin)" stroke="#989492" stroke-width="0.8"/>
+          <rect x="37" y="2" width="5" height="58" rx="2.5" fill="white" opacity="0.3"/>
+          <rect x="82" y="0" width="14" height="68" rx="7" fill="url(#pPin)" stroke="#989492" stroke-width="0.8"/>
+          <rect x="85" y="2" width="5" height="58" rx="2.5" fill="white" opacity="0.3"/>
+          <rect x="8" y="55" width="114" height="108" rx="28" fill="url(#pBody)" stroke="#c8c4c0" stroke-width="1"/>
+          <ellipse cx="65" cy="109" rx="42" ry="44" fill="url(#pFace)" stroke="#d0ccc8" stroke-width="1"/>
+          <text x="65" y="107" font-size="10" fill="#b0aca8" font-family="Arial" text-anchor="middle">~ 250V</text>
+          <text x="65" y="120" font-size="9" fill="#b0aca8" font-family="Arial" text-anchor="middle">16A</text>
+          <rect x="36" y="155" width="58" height="32" rx="14" fill="#c0bcb8" stroke="#a8a4a0" stroke-width="0.8"/>
+          <rect id="plug-cable-exit" x="46" y="178" width="38" height="42" rx="4" fill="url(#pCable)" stroke="#b0acaa" stroke-width="0.5"/>
+          <rect x="50" y="180" width="8" height="38" rx="4" fill="white" opacity="0.22"/>
+        </svg>
+
+        <svg class="plug__svg plug__svg--inserted" id="plug-inserted"
+             viewBox="0 0 220 220" width="190" height="190" fill="none" xmlns="http://www.w3.org/2000/svg"
+             aria-hidden="true" style="display:none;">
+          <defs>
+            <linearGradient id="piBody" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#dedad6"/><stop offset="50%" stop-color="#f0ede9"/><stop offset="100%" stop-color="#d4d0cc"/>
+            </linearGradient>
+            <radialGradient id="piFace" cx="45%" cy="38%" r="62%">
+              <stop offset="0%" stop-color="#f8f6f3"/><stop offset="100%" stop-color="#dedad6"/>
+            </radialGradient>
+          </defs>
+          <circle cx="110" cy="90" r="82" fill="#b8b4b0"/>
+          <circle cx="110" cy="90" r="78" fill="#c8c4c0"/>
+          <circle cx="110" cy="88" r="68" fill="url(#piBody)" stroke="#c0bcb8" stroke-width="1.5"/>
+          <ellipse cx="110" cy="86" rx="54" ry="55" fill="url(#piFace)" stroke="#c8c4c0" stroke-width="1"/>
+          <text x="110" y="80" font-size="9" fill="#a8a4a0" font-family="Arial" text-anchor="middle">~ 250V</text>
+          <text x="110" y="94" font-size="8" fill="#a8a4a0" font-family="Arial" text-anchor="middle">16A</text>
+          <rect x="88" y="148" width="44" height="28" rx="12" fill="#b0aca8" stroke="#989490" stroke-width="0.8"/>
+          <rect x="96" y="168" width="28" height="52" rx="9" fill="#d0ccc8" stroke="#a8a4a0" stroke-width="0.5"/>
+        </svg>
+      </div>
+
+      <svg class="wire-svg-dynamic" aria-hidden="true">
+        <path class="wire-path-dynamic" d="" stroke="#c8c4c0" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.85"/>
+        <path class="wire-path-dynamic" d="" stroke="white" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.35"/>
+      </svg>
+
+      <div class="hint-capsule" id="hint-capsule">
+        🖱️ Крути колесо вправо — появится штекер. Нажми и тяни к розетке
+      </div>
+    </div>
+
+    <div class="plug-scene plug-scene--wire" id="scene-wire">
+    <svg class="wire-decoration" viewBox="0 0 900 200" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="cableGradient" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#d0ccc8"/>
+              <stop offset="50%" stop-color="#e8e4e0"/>
+              <stop offset="100%" stop-color="#c8c4c0"/>
+            </linearGradient>
+          </defs>
+          <path d="M900,120 C800,120 780,80 700,100 C620,120 600,160 520,140 C440,120 420,80 340,100 C260,120 240,160 160,140 C80,120 40,100 0,110"
+              stroke="#c8c4c0" stroke-width="14" fill="none" stroke-linecap="round" class="wire-path"/>
+      </svg>
+    </div>
+    <div class="plug-scene plug-scene--connect" id="scene-connect">
+      <div class="connect-flash" id="connect-flash"></div>
+    </div>
+  </div>
+</section>
+
+<section id="phone-section" class="phone-section" aria-label="Телефонный эпизод">
+  <audio id="phone-ring-audio" src="sounds/imitation-rotary-phone-to-call-iphone.mp3" preload="auto"></audio>
+  <audio id="phone-next-audio" src="sounds/sadtoi-1999.mp3" preload="auto"></audio>
+  <div class="phone-container">
+    <div class="phone-visual">
+
+      <span class="bzyn bzyn--top">бзынь</span>
+      <span class="bzyn bzyn--left">бзынь</span>
+      <span class="bzyn bzyn--right">бзынь</span>
+
+      <div class="phone-state" id="phone-state">
+        <div class="retro-phone">
+          <div class="retro-phone__shadow"></div>
+
+          <div class="retro-phone__body">
+            <div class="retro-phone__panel">
+              <div class="retro-phone__dial">
+                <span class="retro-phone__dial-center"></span>
+                <span class="retro-phone__dial-hole h1"></span>
+                <span class="retro-phone__dial-hole h2"></span>
+                <span class="retro-phone__dial-hole h3"></span>
+                <span class="retro-phone__dial-hole h4"></span>
+                <span class="retro-phone__dial-hole h5"></span>
+                <span class="retro-phone__dial-hole h6"></span>
+                <span class="retro-phone__dial-hole h7"></span>
+                <span class="retro-phone__dial-hole h8"></span>
+              </div>
+            </div>
+
+            <div class="retro-phone__base-line"></div>
+            <div class="retro-phone__feet"></div>
+          </div>
+
+          <div class="retro-phone__handset retro-phone__handset--on-base" id="retro-handset">
+            <span class="cap cap--left"></span>
+            <span class="grip"></span>
+            <span class="cap cap--right"></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button id="phone-pick-btn" class="phone-action-btn" style="display:none;">
+      Поднять трубку
+    </button>
+
+    <div class="phone-dialogue">
+      <p id="dial-question" class="dialogue-line" style="display:none;">
+        Скажи почему Винсент Ван Гог отрезал себе ухо или твои знания об искусстве ничтожны?
+      </p>
+      <p id="dial-ask" class="dialogue-line dialogue-line--secondary" style="display:none;">
+        ну так что, ты знаешь ответ? 
+      </p>
+      <p id="dial-mock" class="dialogue-line dialogue-line--laugh" style="display:none;">
+        я не слышу твоего ответа..твои знания об искусстве желают лучшего, аххах 
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="dark-transition" id="dark-transition" aria-hidden="true">
+  <div class="transition-overlay"></div>
+</section>
+
+<section class="story-section" id="story" aria-label="История Ван Гога">
+  </div>
+  <div class="story-slider" id="story-slider">
+
+    <article class="story-block story-block--left" data-story="1">
+      <div class="story-block__image-wrap"><img src="foto/1.jpg" alt="Ссора Ван Гога и Гогена" class="story-block__image" width="800" height="550" loading="lazy"></div>
+      <div class="story-block__text-wrap">
+        <h2 class="story-block__title">Роковая ссора с Гогеном</h2>
+        <p class="story-block__date">23 декабря 1888 года, вечер</p>
+        <p class="story-block__body">Напряжение между Ван Гогом и Гогеном достигло предела: после постоянных споров об искусстве (натура против воображения) Гоген заявил, что больше не может терпеть вспышки Ван Гога и решил уехать в Париж.</em></p>
+      </div>
+    </article>
+
+    <article class="story-block story-block--right" data-story="2">
+      <div class="story-block__image-wrap"><img src="foto/2.jpg" alt="Погоня с бритвой" class="story-block__image" width="800" height="550" loading="lazy"></div>
+      <div class="story-block__text-wrap">
+        <h2 class="story-block__title">Холодный взгляд</h2>
+        <p class="story-block__date">Тёмная улица Арля</p>
+        <p class="story-block__body">На улице Ван Гог догнал Гогена. В руках у Винсента была открытая опасная бритва. Но под его холодным взглядом замер, опустил голову — и, не сказав ни слова, ушёл.</p>
+      </div>
+    </article>
+
+    <article class="story-block story-block--left" data-story="3">
+      <div class="story-block__image-wrap"><img src="foto/3.jpg" alt="Гоген убегает" class="story-block__image" width="800" height="550" loading="lazy"></div>
+      <div class="story-block__text-wrap">
+        <h2 class="story-block__title">Ночь побега</h2>
+        <p class="story-block__date">Та же ночь</p>
+        <p class="story-block__body">Напуганный Гоген решил не возвращаться в «Жёлтый дом» и сбегает ночевать в гостиницу. Больше он в Арль не вернётся никогда.</p>
+      </div>
+    </article>
+
+    <article class="story-block story-block--right" data-story="4">
+      <div class="story-block__image-wrap"><img src="foto/4.jpg" alt="Ван Гог отрезает ухо" class="story-block__image" width="800" height="550" loading="lazy"></div>
+      <div class="story-block__text-wrap">
+        <h2 class="story-block__title">Шёпот безумия</h2>
+        <p class="story-block__date">Ночь, «Жёлтый дом»</p>
+        <p class="story-block__body">Оставшись в абсолютном одиночестве, Ван Гог пережил острейший приступ безумия. Голоса в голове толкали его к действию. Он взял ту же бритву и отрезал себе большую часть левого уха.Остановив кровь полотенцами, он завернул отрезанное в газету, надел берет и вышел на улицу.</p>
+      </div>
+    </article>
+
+    <article class="story-block story-block--left" data-story="5">
+      <div class="story-block__image-wrap"><img src="foto/5.jpg" alt="Свёрток для Габриэль" class="story-block__image" width="800" height="550" loading="lazy"></div>
+      <div class="story-block__text-wrap">
+        <h2 class="story-block__title">Свёрток для Габриэль</h2>
+        <p class="story-block__date">Той же ночью</p>
+        <p class="story-block__body">Ван Гог подошёл к 18-летней Габриэль — молча протянул ей свёрток и произнёс: <em>«Береги эту вещь»</em>, — сказал он тихо и, не дожидаясь ответа, ушел.</p>
+      </div>
+    </article>
+
+    <article class="story-block story-block--right" data-story="6">
+      <div class="story-block__image-wrap"><img src="foto/6.jpg" alt="Паника" class="story-block__image" width="800" height="550" loading="lazy"></div>
+      <div class="story-block__text-wrap">
+        <h2 class="story-block__title">Кровавый подарок</h2>
+        <p class="story-block__date">Ночь</p>
+        <p class="story-block__body">Девушка развернула газету — и мир оборвался. На страницах, среди обычных новостей, лежало окровавленное человеческое ухо. Она даже не успела закричать. Сознание мгновенно погасло. Через секунды улица уже гудела: люди сбегались, кто-то кричал, кто-то доставал телефон. Паника расползалась быстрее слухов. Кто-то уже вызывал полицию.</p>
+      </div>
+    </article>
+
+    <article class="story-block story-block--left" data-story="7">
+      <div class="story-block__image-wrap"><img src="foto/7.jpg" alt="Ван Гог дома" class="story-block__image" width="800" height="550" loading="lazy"></div>
+      <div class="story-block__text-wrap">
+        <h2 class="story-block__title">На грани тишины</h2>
+        <p class="story-block__date">Поздняя ночь</p>
+        <p class="story-block__body">Ван Гог вернулся домой, лёг в кровать и уснул, балансируя на грани жизни — почти истекший кровью.. Полицейские нашли его там — бледного, обескровленного.</p>
+      </div>
+    </article>
+
+    <article class="story-block story-block--right" data-story="8">
+      <div class="story-block__image-wrap"><img src="foto/8.jpg" alt="Больница" class="story-block__image" width="800" height="550" loading="lazy"></div>
+      <div class="story-block__text-wrap">
+        <h2 class="story-block__title">Там, где медицина бессильна</h2>
+        <p class="story-block__date">Больница Арля</p>
+        <p class="story-block__body">В критическом состоянии от потери крови Ван Гог оказался в городской больнице Арля. Врачи не верили, что он выживет: сильная кровопотеря и риск заражения оставляли мало шансов. Но вопреки всему уже через несколько дней он неожиданно пошёл на поправку.</p>
+      </div>
+    </article>
+
+    <article class="story-block story-block--left" data-story="9">
+      <div class="story-block__image-wrap"><img src="foto/9.jpg" alt="Автопортрет" class="story-block__image" width="800" height="550" loading="lazy"></div>
+      <div class="story-block__text-wrap">
+        <h2 class="story-block__title">Бегство в холст</h2>
+        <p class="story-block__date">7 января 1889 года</p>
+        <p class="story-block__body">7 января Ван Гога выписали. Он вернулся домой и сразу принялся за работу — тогда написаны знаменитые автопортреты с забинтованной головой.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="cta-section" id="cta" aria-label="Присоединяйся к нам">
+  <div class="cta-portrait">
+    <img src="foto/ava.jpg" alt="Автопортрет Ван Гога" class="cta-portrait__img" width="400" height="200" loading="lazy">
+  </div>
+  <div class="cta-text">
+    <p class="cta-text__reveal">Теперь ты знаешь одну из тайн искусства</p>
+    <p class="cta-text__cta">присоединяйся к нам, чтобы узнать больше интересного!</p>
+  </div>
+  <div class="cta-logo-block">
+    <div class="paintings-orbit" id="paintings-orbit" aria-hidden="true">
+      <img class="orbit-painting" src="foto/k1.jpg" alt="" width="120" height="90" loading="lazy">
+      <img class="orbit-painting" src="foto/k2.jpg" alt="" width="100" height="80" loading="lazy">
+      <img class="orbit-painting" src="foto/k3.jpg" alt="" width="110" height="85" loading="lazy">
+      <img class="orbit-painting" src="foto/k4.jpg" alt="" width="95"  height="75" loading="lazy">
+      <img class="orbit-painting" src="foto/k5.jpg" alt="" width="130" height="95" loading="lazy">
+      <img class="orbit-painting" src="foto/k6.jpg" alt="" width="105" height="80" loading="lazy">
+      <img class="orbit-painting" src="foto/k7.jpg" alt="" width="120" height="90" loading="lazy">
+      <img class="orbit-painting" src="foto/k8.jpg" alt="" width="100" height="80" loading="lazy">
+      <img class="orbit-painting" src="foto/k9.jpg" alt="" width="110" height="85" loading="lazy">
+      <img class="orbit-painting" src="foto/k10.jpg" alt="" width="95"  height="75" loading="lazy">
+      <img class="orbit-painting" src="foto/k11.jpg" alt="" width="130" height="95" loading="lazy">
+      <img class="orbit-painting" src="foto/k12.jpg" alt="" width="105" height="80" loading="lazy">
+      <img class="orbit-painting" src="foto/k13.jpg" alt="" width="120" height="90" loading="lazy">
+      <img class="orbit-painting" src="foto/k14.jpg" alt="" width="100" height="80" loading="lazy">
+      <img class="orbit-painting" src="foto/k15.jpg" alt="" width="110" height="85" loading="lazy">
+      <img class="orbit-painting" src="foto/k16.jpg" alt="" width="95"  height="75" loading="lazy">
+      <img class="orbit-painting" src="foto/k17.jpg" alt="" width="130" height="95" loading="lazy">
+      <img class="orbit-painting" src="foto/k18.jpg" alt="" width="105" height="80" loading="lazy">
+      <img class="orbit-painting" src="foto/k19.jpg" alt="" width="120" height="90" loading="lazy">
+      <img class="orbit-painting" src="foto/k20.jpg" alt="" width="100" height="80" loading="lazy">
+      <img class="orbit-painting" src="foto/k21.jpg" alt="" width="110" height="85" loading="lazy">
+    </div>
+    <h1 class="cta-logo-text">КУЛЬТУРИ</h1>
+  </div>
+  <a href="https://www.figma.com/design/kIKyNXmqYM1vaDPuFvmSmW/%D0%A7%D0%B8%D0%BA%D1%83%D1%80%D0%BE%D0%B2%D0%B0-%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%B0-3-%D0%BC%D0%B4-4?node-id=0-1&t=ERM9pNOEjlq4z4pb-1" class="download-btn" aria-label="Открыть макет в Figma">
+    <span>Открыть в Figma</span></a>
+</section>
+
+<section class="topics-section" id="topics" aria-label="Пять тем каждую неделю">
+  <h2 class="topics-section__title">
+    5 тем каждую неделю, благодаря которым ты сможешь узнать больше про...
+  </h2>
+  <div class="topics-grid" role="list">
+    <article class="topic-card" role="listitem" tabindex="0" aria-label="Искусство">
+      <div class="topic-card__image-wrap"><img src="foto/iskysstvo.webp" alt="Искусство" class="topic-card__image" width="300" height="400" loading="lazy"></div>
+      <p class="topic-card__label">Искусство</p>
+    </article>
+    <article class="topic-card" role="listitem" tabindex="0" aria-label="Кухню">
+      <div class="topic-card__image-wrap"><img src="foto/eda.jpg" alt="Кухня" class="topic-card__image" width="300" height="400" loading="lazy"></div>
+      <p class="topic-card__label">Кухню</p>
+    </article>
+    <article class="topic-card" role="listitem" tabindex="0" aria-label="Природу">
+      <div class="topic-card__image-wrap"><img src="foto/priroda.webp" alt="Природа" class="topic-card__image" width="300" height="400" loading="lazy"></div>
+      <p class="topic-card__label">Природу</p>
+    </article>
+    <article class="topic-card" role="listitem" tabindex="0" aria-label="Народы">
+      <div class="topic-card__image-wrap"><img src="foto/harod.webp" alt="Народы" class="topic-card__image" width="300" height="400" loading="lazy"></div>
+      <p class="topic-card__label">Народы</p>
+    </article>
+    <article class="topic-card" role="listitem" tabindex="0" aria-label="Сказки">
+      <div class="topic-card__image-wrap"><img src="foto/ckazka.jpg" alt="Сказки" class="topic-card__image" width="300" height="400" loading="lazy"></div>
+      <p class="topic-card__label">Сказки</p>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" id="contacts">
+  <div class="footer__inner">
+    <p class="footer__copy">© 2026 Kultury</p>
+    <p class="footer__slogan">Мы не кусаемся. Кусается только абстракционизм.</p>
+    <div class="footer__right">
+      <a href="mailto:art@kultury.app" class="footer__email">art@kultury.app</a>
+      <div class="footer__socials">
+        <a href="#" class="footer__social-btn" aria-label="Google" target="_blank" rel="noopener noreferrer">G</a>
+        <a href="#" class="footer__social-btn" aria-label="VK" target="_blank" rel="noopener noreferrer">VK</a>
+        <a href="#" class="footer__social-btn" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M23 7s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C16.4 2.8 12 2.8 12 2.8s-4.4 0-6.8.1c-.6.1-1.9.1-3 1.3C1.3 5 1 7 1 7S.7 9.1.7 11.3v2c0 2.1.3 4.2.3 4.2s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.3 1.2C7.5 21.7 12 21.7 12 21.7s4.4 0 6.8-.2c.6-.1 1.9-.1 3-1.3.9-.8 1.2-2.8 1.2-2.8s.3-2.1.3-4.2v-2C23.3 9.1 23 7 23 7zM9.7 15.5V8.4l8.1 3.6-8.1 3.5z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
