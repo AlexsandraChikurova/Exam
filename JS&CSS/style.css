@@ -1,7 +1,6 @@
 @font-face {
   font-family: 'Satyr SP';
-  src: url('fonts/SatyrSP.woff2') format('woff2'),
-       url('fonts/SatyrSP.woff') format('woff');
+  src: url('../fonts/SatyrSP.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -27,6 +26,7 @@ body.story-locked {
 }
 
 body {
+  margin: 0;
   font-family: 'Inter', 'Helvetica Neue', sans-serif;
   font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
   color: #161616;
@@ -282,6 +282,30 @@ section,
   box-shadow: 0 1px 3px rgba(30, 10, 5, 0.08);
   max-width: 520px;
   animation: hint-bounce 2s ease-in-out infinite;
+}
+
+@media (max-width: 575px) {
+  .plug-scene--socket {
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .socket {
+    width: min(68vw, 240px);
+    height: min(68vw, 240px);
+    transform: translateY(-45px);
+  }
+
+  .hint-capsule {
+    left: 50%;
+    bottom: 1.25rem;
+    width: calc(100vw - 2rem);
+    max-width: none;
+    padding: 0.65rem 1rem;
+    text-align: center;
+    transform: translateX(-50%);
+    animation: none;
+  }
 }
 
 @keyframes hint-bounce {
@@ -1621,9 +1645,9 @@ body.shaking { animation: screen-shake 0.5s ease-out; }
   }
 
   .plug {
-    right: 12vw;
-    bottom: -2.5vh;
-    width: 90px;
+    right: 1rem;
+    bottom: 4.75rem;
+    width: 84px;
   }
 
   #plug-cable-exit {
@@ -1696,9 +1720,9 @@ body.shaking { animation: screen-shake 0.5s ease-out; }
     display: none !important;
   }
   .plug {
-    right: 10vw;
-    bottom: -2vh;
-    width: 75px;
+    right: 0.75rem;
+    bottom: 5.25rem;
+    width: 72px;
   }
   #plug-cable-exit {
     transform: translateX(0px) translateY(0px) scale(0.8) !important;

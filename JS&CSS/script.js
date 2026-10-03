@@ -29,31 +29,7 @@ lockIntroScroll();
 ;(function initPlugWorld() {
   const track = $('plug-track');
   if (!track) return;
-  let current = 0;
-  function goTo(n) {
-    current = Math.max(0, Math.min(n, 2));
-    track.style.transform = 'translateX(-' + (current * 100) + 'vw)';
-
-    var wp = document.querySelector('.wire-path');
-
-  if (current === 1) {
-    var wp = document.querySelector('.wire-path');
-    if (wp) wp.classList.add('wire-drawn');
-  }
-  }
-  const world = $('plug-world');
-  if (world) {
-    world.addEventListener('wheel', function(e) {
-      e.preventDefault();
-      if ((e.deltaY > 30 || e.deltaX > 30) && current < 1) goTo(current + 1);
-      else if ((e.deltaY < -30 || e.deltaX < -30) && current > 0) goTo(current - 1);
-    }, { passive: false });
-  }
-
-  const btn = $('scroll-arrow-btn');
-  if (btn) btn.addEventListener('click', function() { if (current < 1) goTo(1); });
-
-  window._plugWorld = { goTo, get: function() { return current; } };
+  track.style.transform = 'translateX(0)';
 })();
 
 ;(function initPlugDrag() {
@@ -63,7 +39,6 @@ if (!plug || !socket) return;
 
 const plugNormal = $('plug-normal');
 const plugInserted = $('plug-inserted');
-const plugLabel = $('plug-label');
 const plugTail = $('plug-cable-exit');
 
 let dragging = false;
@@ -202,7 +177,6 @@ function onEnd() {
     setTimeout(function() {
       if (plugNormal) plugNormal.style.display = 'none';
       if (plugInserted) plugInserted.style.display = 'block';
-      if (plugLabel) plugLabel.style.opacity = '0';
       hideWire();
     }, 280);
 
@@ -243,7 +217,6 @@ async function triggerConnection() {
   console.log('%c✅ triggerConnection СРАБОТАЛ', 'color: lime; font-size: 16px;');
 
   const flash = $('connect-flash');
-  const ct    = $('connect-text');
   const phone = $('phone-section');
   const audio = $('phone-ring-audio');
 
@@ -274,13 +247,6 @@ async function triggerConnection() {
         console.warn('Не удалось воспроизвести звук звонка:', err);
       });
     }
-  }
-
-  if (ct) {
-    ct.classList.add('visible');
-    setTimeout(function() {
-      ct.classList.remove('visible');
-    }, 900);
   }
 
   await wait(600);
@@ -326,15 +292,9 @@ function startPhoneSequence() {
     requestAnimationFrame(() => el.classList.add('visible'));
   }
 
-  function swapState(fromId, toId) {
-    const from = $(fromId);
-    const to = $(toId);
-    if (from) from.style.display = 'none';
-    if (to) to.style.display = 'flex';
-  }
-
   try {
-    swapState('phone-ringing', 'phone-lifted');
+    const handset = $('retro-handset');
+    if (handset) handset.classList.remove('retro-phone__handset--on-base');
     await wait(800);
 
     showLine(q);
@@ -343,7 +303,6 @@ function startPhoneSequence() {
     showLine(a);
     await wait(2000);
 
-    swapState('phone-lifted', 'phone-mockery');
     showLine(m);
     await wait(3100);
   } catch (err) {
@@ -385,8 +344,8 @@ function initStorySlider() {
   _storyInit = true;
 
   const slides = Array.from(document.querySelectorAll('.story-block'));
-  const cur    = $('story-current');
-  const tot    = $('story-total');
+  const cur    = document.getElementById('story-current');
+  const tot    = document.getElementById('story-total');
   const sec    = $('story');
   if (!slides.length) return;
 
@@ -543,19 +502,6 @@ function revealCta() {
       }, 150);
     });
 });
-})();
-
-;(function() {
-  const world = $('plug-world');
-  if (!world || !window._plugWorld) return;
-  let startX = 0;
-  world.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
-  world.addEventListener('touchend', function(e) {
-    const diff = startX - e.changedTouches[0].clientX;
-    const cur = window._plugWorld.get();
-    if (diff > 50 && cur < 1) window._plugWorld.goTo(1);
-    if (diff < -50 && cur > 0) window._plugWorld.goTo(0);
-  }, { passive: true });
 })();
 
 console.log('%c🎨 КУЛЬТУРИ загружен', 'background:#120808;color:#d8c9b6;padding:4px 12px;border-radius:4px;');
